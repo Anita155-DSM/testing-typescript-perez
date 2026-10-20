@@ -21,4 +21,8 @@ describe('calcularPrecioFinal', () => {
     expect(() => calcularPrecioFinal(-100, 10)).toThrow(RangeError)
   });
 
+  it('rechaza NaN como precio', () => {
+    expect(() => calcularPrecioFinal(NaN, 10)).toThrow(RangeError);
+  });
+
 });
