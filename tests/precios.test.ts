@@ -15,7 +15,7 @@ describe('calcularPrecioFinal', () => {
   });
 
   it('devuelve cero con un descuento del 100%', () => {
-    expect(() => calcularPrecioFinal(1000, 100)).toBe(0)
+    expect(calcularPrecioFinal(1000, 100)).toBe(0)
   });
   it('rechaza precios menores a 0', () => {
     expect(() => calcularPrecioFinal(-100, 10)).toThrow(RangeError)
